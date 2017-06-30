@@ -120,7 +120,18 @@ app.use(function(err, req, res, next) {
 myNuts.init()
 
 // Start the HTTP server
+.then(function() {
+    var server = app.listen(process.env.PORT || 5000, function () {
+        var host = server.address().address;
+        var port = server.address().port;
 
+        console.log('Listening at http://%s:%s', host, port);
+    });
+}, function(err) {
+    console.log(err.stack || err);
+    process.exit(1);
+});
+/*
 .then(function() {
     var server = app.listen(process.env.PORT || 5000, 'localhost', function () {
         var host = server.address().address;
@@ -133,7 +144,7 @@ myNuts.init()
     console.log(err.stack || err);
     process.exit(1);
 });
-/*
+*//*
 .then(function() {
     var server = app.listen(process.env.PORT || 5000, 'localhost', function(err) {
         if(err) return console.log(err);

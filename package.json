@@ -44,7 +44,7 @@
     "url": "https://github.com/GitbookIO/nuts.git"
   },
   "scripts": {
-    "start": "PORT=6000 GITHUB_USERNAME=akominch GITHUB_PASSWORD=alex25007*** GITHUB_REPO=akominch/todoapp API_USERNAME=admin API_PASSWORD=alex25007 node bin/web.js",
+    "start": "PORT=6000 GITHUB_USERNAME=akominch GITHUB_PASSWORD=alex25007*** GITHUB_REPO=akominch/todoapp API_USERNAME=admin API_PASSWORD=alex25007 TRUST_PROXY=loopback node bin/web.js",
     "test": "mocha --reporter list"
   }
 }
