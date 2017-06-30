@@ -122,7 +122,7 @@ myNuts.init()
 // Start the HTTP server
 
 .then(function() {
-    var server = app.listen(process.env.PORT || 5000, 'localhost', function () {
+    var server = app.listen(process.env.PORT || 5000, 'https://update-nuts-todo-app.herokuapp.com', function () {
         var host = server.address().address;
         //var host = '127.0.0.1';
         var port = server.address().port;
